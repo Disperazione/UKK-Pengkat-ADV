@@ -1,0 +1,153 @@
+*{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#toast-container > .toast-custom {
+    content: "\f00C";
+}
+
+/* this will set the toastr style */
+.toast-custom {
+    background-color: purple;
+}
+
+/* header */
+.header .row{
+    margin-top: 10%;
+}
+.header p:first-child{
+    font-weight: bold;
+    color: red;
+    margin-bottom: 30px;
+}
+.header p:nth-child(2){
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 10%;
+}
+h2{
+    font-size: 29px;
+   font-family: 'Fjalla One', sans-serif;
+}
+h3{
+    font-size: 29px;
+   font-family: 'Fjalla One', sans-serif;
+
+}
+h4{
+    font-weight: 300;
+}
+.header img{
+    width: 550px;
+}
+/* content */
+.content p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+#login{
+    padding-top: 130px;
+    /* background-color: #0f4567ea; */
+    background-image: url('desa.jpg');
+    background-size: cover;
+    height: 760px;
+    /* opacity: 1.2; */
+    /* filter: brightness(50%); */
+    /* position: block; */
+}
+#login .headcard{
+   padding: 15px 7px 7px;
+   width: 350px;
+   background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   z-index: 1;
+   border-radius: 10px;
+   
+}
+#login .formcard{
+    width: 400px;
+    padding-bottom: 30px;
+    margin-top: -35px !important;
+    border-radius: 10px;
+    border: none;
+}
+#login .formcard .input-group-text{
+    border: none; 
+    color: white;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* border-radius: 150px; */
+}
+#login .formcard .form-control{
+    border: none;
+    font-weight: 400;
+}
+#login button{
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    margin-left: 110px;
+    width: 170px;
+    font-size: 16px;
+    /* border-radius: 10px; */
+    
+}
+
+#register{
+    padding-top: 80px;
+    /* background-color: #0f4567ea; */
+    background-image: url('desa.jpg');
+    background-size: cover;
+    height: 760px;
+    /* opacity: 1.2; */
+    /* filter: brightness(50%); */
+    /* position: block; */
+    
+    
+}
+#register .headcard{
+   padding: 15px 7px 7px;
+   width: 350px;
+   background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   z-index: 1;
+   border-radius: 10px;
+   
+}
+#register .formcard{
+    width: 430px;
+    padding-bottom: 30px;
+    margin-top: -35px !important;
+    border-radius: 10px;
+    border: none;
+}
+#register .formcard .input-group-text{
+    border: none;
+    border-bottom: 1px solid #4A00E0; 
+    color: #4A00E0;
+    background-color: transparent;
+    
+}
+#register .formcard .form-control{
+    border: none;
+    font-weight: 400;
+    border-bottom: 1px solid #4A00E0;
+}
+#register button{
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    margin-left: 130px;
+    width: 170px;
+    font-size: 16px;
+    /* border-radius: 10px; */
+    
+}
