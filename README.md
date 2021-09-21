@@ -1,2 +1,2 @@
 # UKK-Pengkat-ADV
-Buat UKK Pengkat Adavanced
+Buat UKK Pengkat Advanced
