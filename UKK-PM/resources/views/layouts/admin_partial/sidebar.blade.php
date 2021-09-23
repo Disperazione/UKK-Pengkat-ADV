@@ -19,7 +19,7 @@
 
         <!-- User menu -->
         <div class="sidebar-user">
-           
+
         </div>
         <!-- /user menu -->
 
@@ -56,12 +56,12 @@
                     </a>
                 </li>
                 @endif
-              
+
                 <!-- /main -->
 
-              
+
               {{-- petugas --}}
-             
+
               @if ($petugas->level == 'admin')
               <li class="nav-item nav-item-submenu  {{'petugas/report/laporan_masyarakat' === request()->path()  ||'petugas/report/laporan_pengaduan' === request()->path()  ||'petugas/dashboard' === request()->path() || 'petugas/masyarakat/data' === request()->path() ?  '' : 'nav-item-expanded nav-item-open'}} ">
                 <a href="#" class="nav-link {{'petugas/admin/data' === request()->path() ? 'active ' : ''}}"><i class="icon-user-tie"></i> <span> Petugas</span></a>
@@ -82,32 +82,32 @@
                       <li class="nav-item"><a href="{{route('laporan.masyarakat')}}" class="nav-link {{'petugas/report/laporan_masyarakat' === request()->path() ? 'active' : ''}}">Laporan Masyarakat</a></li>
                   </ul>
               </li>
-            
+
               {{-- petuags --}}
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Forms -->
 
-               
+
 
             </ul>
         </div>
@@ -115,5 +115,5 @@
 
     </div>
     <!-- /sidebar content -->
-    
+
 </div>

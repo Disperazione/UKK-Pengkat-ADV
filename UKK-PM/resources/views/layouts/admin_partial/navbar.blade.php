@@ -26,19 +26,19 @@
             </li>
 
             <li class="nav-item dropdown">
-               
-                       
 
-                   
+
+
+
             </li>
         </ul>
 
         <span class="badge bg-success ml-md-3 mr-md-auto"> Admin</span>
 
         <ul class="navbar-nav">
-       
 
-           
+
+
 
             <li class="nav-item dropdown dropdown-user">
                 <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">

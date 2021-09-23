@@ -61,10 +61,10 @@
     <!-- hero tutup -->
 
     <!-- content buka -->
-    <div style="    position: absolute;left: 0;right: 0;width: 100%;" class="card badge h-30 bg-secondary mb-4">
+    <div style="position: absolute;left: 0;right: 0;width: 100%; background-color: #ffffff; height: 400px;" class=" badge h-30 mb-4">
         <div class="card-body  align-items-center">
-            <h1 style="margin-top: -20px; font-family: 'Oswald', sans-serif;">JUMLAH LAPORAN SEKARANG</h1>
-            <h1  style="font-size: 100px; font-family: 'Staatliches', cursive;" id="total" >{{$jumlah_pengaduan}}</h1>
+            <h1 style="margin-top: 110px; font-family: 'Oswald', sans-serif; color: #ffc371">JUMLAH LAPORAN SEKARANG</h1>
+            <h1  style="font-size: 100px; font-family: 'Staatliches', cursive; color: #ffc371" id="total" >{{$jumlah_pengaduan}}</h1>
 
         </div>
         <br>

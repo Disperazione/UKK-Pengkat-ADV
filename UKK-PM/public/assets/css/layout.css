@@ -457,7 +457,8 @@ body {
   display: inline-block; }
 
 .sidebar-dark {
-  background-color: #263238;
+  /* background-color: #263238; */
+  background-color: #0c2461;
   color: #fff; }
   .sidebar-dark .sidebar-mobile-toggler {
     color: rgba(255, 255, 255, 0.9);
@@ -496,7 +497,7 @@ body {
 .sidebar-dark .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar > .nav-item-open > .nav-link:not(.disabled),
 .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar > .nav-item > .nav-link.active {
-  background-color: #26A69A;
+  background-color: #4a69bd;
   color: #fff; }
 
 .sidebar-dark .nav-sidebar .nav-item-header,
