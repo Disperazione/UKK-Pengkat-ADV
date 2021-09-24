@@ -65,7 +65,7 @@
                         <span class="input-group-text  fs-6 "><i style="color: black;" class="fas fa-unlock-alt"></i></span>
                         <input id="password-confirm" type="password" class="form-control " placeholder="Konfirmasi password"style="font-size: 14px;" name="confirm_password" >
                     </div>
-                    
+
                     <div class="">
                         <button type="submit" class="btn text-white mt-2">DAFTAR</button>
                         <!-- <a href="">Sudah punya akun? Login</a> -->
