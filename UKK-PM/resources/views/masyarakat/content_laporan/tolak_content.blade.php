@@ -1,12 +1,16 @@
 @extends('masyarakat.dashboard')
-
+@section('mas-css')
+    <style>
+        .con-1{
+            margin-left: -160px;
+        }
+        #myDIV{
+            width: 1010px;
+        }
+    </style>
+@endsection
 @section('content_laporan')
     {{-- tolak --}}
-
-
-
-
-
     @forelse ($tolak as $tol)
         <div class="accordion-item " style="border-radius: 15px;">
             <h2 class="accordion-header" id="flush-heading{{ $loop->iteration }}">

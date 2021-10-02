@@ -31,10 +31,10 @@
             <!-- logo -->
             {{-- <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="{{ asset('/themes/educenter/images/logo.png')}}" alt="logo"></a> --}}
             <ul class="list-unstyled">
-              <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-              <li class="mb-2">+1 (2) 345 6789</li>
-              <li class="mb-2">+1 (2) 345 6789</li>
-              <li class="mb-2">contact@yourdomain.com</li>
+              <li class="mb-2">Depok, Jawa Barat - SMK Taruna Bhakti</li>
+              <li class="mb-2">+62 895 3230 16855</li>
+              <li class="mb-2">+62 838 9680 2804</li>
+              <li class="mb-2">pengaduanmasyarakat11@gmail.com</li>
             </ul>
           </div>
           <!-- company -->
@@ -90,7 +90,7 @@
                 var CurrentYear = new Date().getFullYear()
                 document.write(CurrentYear)
               </script>
-              © themefisher</p>
+               @ PengaduanMasyarakat</p>
           </div>
           <div class="col-sm-5 text-sm-right text-center">
             <ul class="list-inline">

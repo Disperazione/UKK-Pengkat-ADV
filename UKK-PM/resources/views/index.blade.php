@@ -1,5 +1,12 @@
 @extends('layouts.auth')
+@section('style')
+<style>
+.slick-dots{
+    display: none;
+}
+</style>
 
+@endsection
 @section('content')
     <!-- hero slider -->
     <section class="hero-section overlay bg-cover" data-background="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">

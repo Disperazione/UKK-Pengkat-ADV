@@ -54,7 +54,7 @@
     {{-- new css --}}
         @yield('style')
 
-    <title>Home, World!</title>
+    <title>Mari Ngadu! | Home</title>
 </head>
 
 <body>

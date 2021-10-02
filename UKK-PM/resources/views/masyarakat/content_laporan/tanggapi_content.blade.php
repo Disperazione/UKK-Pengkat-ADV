@@ -1,5 +1,11 @@
 @extends('masyarakat.dashboard')
-
+@section('mas-css')
+    <style>
+        .con-1{
+            margin-left: -40px;
+        }
+    </style>
+@endsection
 @section('content_laporan')
     {{-- tanggapi --}}
 

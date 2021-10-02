@@ -64,9 +64,9 @@ h4{
 #login .headcard{
    padding: 15px 7px 7px;
    width: 350px;
-   background: #8E2DE2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #ffbc3b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd380, #ffbc3b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd380, #ffbc3b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    z-index: 1;
    border-radius: 10px;
 
@@ -81,8 +81,8 @@ h4{
 #login .formcard .input-group-text{
     border: none;
     color: white;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: -webkit-linear-gradient(to right, #ffbc3b, #ffd380);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffbc3b, #ffd380);
     /* border-radius: 150px; */
 }
 #login .formcard .form-control{
@@ -90,9 +90,9 @@ h4{
     font-weight: 400;
 }
 #login button{
-    background: #8E2DE2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: #ffbc3b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd380, #ffbc3b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd380, #ffbc3b);
     margin-left: 110px;
     width: 170px;
     font-size: 16px;
@@ -115,9 +115,9 @@ h4{
 #register .headcard{
    padding: 15px 7px 7px;
    width: 350px;
-   background: #8E2DE2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #ffbc3b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd380, #ffbc3b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd380, #ffbc3b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    z-index: 1;
    border-radius: 10px;
 
@@ -131,20 +131,20 @@ h4{
 }
 #register .formcard .input-group-text{
     border: none;
-    border-bottom: 1px solid #4A00E0;
-    color: #4A00E0;
+    border-bottom: 1px solid #ffbc3b;
+    color: #ffbc3b;
     background-color: transparent;
 
 }
 #register .formcard .form-control{
     border: none;
     font-weight: 400;
-    border-bottom: 1px solid #4A00E0;
+    border-bottom: 1px solid #ffbc3b;
 }
 #register button{
-    background: #8E2DE2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: #ffbc3b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffbc3b, #ffd380);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffbc3b, #ffd380);
     margin-left: 130px;
     width: 170px;
     font-size: 16px;

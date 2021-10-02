@@ -1,8 +1,13 @@
 @extends('masyarakat.dashboard')
-
+@section('mas-css')
+    <style>
+        .con-1{
+            margin-left: -40px;
+        }
+    </style>
+@endsection
 @section('content_laporan')
     {{-- proses --}}
-
     @forelse ($pengaduan as $pengadu)
                                                 <div class="accordion-item " style="border-radius: 15px;">
                                                     <h2 class="accordion-header"
@@ -47,7 +52,7 @@
                                                                                         class="text-muted">{{ $pengadu->updated_at->diffForHumans() }}</small>
                                                                                 </p>
                                                                             </div>
-                                                                            
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -62,5 +67,5 @@
 
                                             @endforelse
                                             {{ $pengaduan->links() }}
-                   
+
 @endsection
