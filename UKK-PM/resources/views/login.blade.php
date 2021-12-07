@@ -40,7 +40,8 @@
                                             </div>
                                             @endif
                                         </div>
-                                        <form  method="POST" action="{{ route('kirimlogin') }}"  class="mt-5">
+                       
+                                        <form id="frmlogin"  method="POST"   class="mt-5" onsubmit="event.preventDefault();">
                                                 @csrf
                                                 <div class="input-group pb-3 m-auto" style="width: 330px; ">
                                                     <span class="input-group-text pe-3 ps-3 fs-6"><i class="fas fa-user"></i></span>
@@ -88,5 +89,12 @@
 </section>
 
 @endsection
-@section('script')
-@endsection
+
+
+
+
+
+
+<script>
+ 
+</script>

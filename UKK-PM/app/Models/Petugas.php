@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 
 class Petugas extends Model
 {
     use HasFactory;
     use Notifiable;
+    use HasApiTokens;
 
     
     protected $guard   = 'petugas';

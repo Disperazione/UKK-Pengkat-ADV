@@ -11,40 +11,12 @@ class MasyarakatController extends Controller
 {
     
 
+public function dashboard()
+{
+    return view('masyarakat.dashboard');
 
-    public function registerForm()
-    {
-        return view('register');
-    }
-
-
-    public function registerPost(Request $request)
-    {
-        $request->validate([
-            'nik' => 'required|min:10,max:15',
-            'nama' => 'required',
-            'username' => 'required',
-            'password' => 'required|required_with:confirm_password|same:confirm_password',
-            'confirm_password' => 'min:5',
-            'telp' => 'required',
-        ],[
-            'required' =>  'Tidak boleh kosong!',
-            'same' =>  'Confirm password harus sama!',
-            'min:10' =>  'Min 10 character',
-            'max' =>  'Max 15 character',
-        ]);
-
-             Masyarakat::create([
-                'nik' => $request->nik,
-            'nama' => $request->nama,
-            'username' => $request->username,
-            'password' => Hash::make($request->password),
-            'telp' => $request->telp,
-             ]);
-
-             return redirect()->route('login')->with('success','Berhasil Daftar!');
-
-    }
+}
+   
 
     public function history($id)
     {   

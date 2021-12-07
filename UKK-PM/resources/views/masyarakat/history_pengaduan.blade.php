@@ -5,8 +5,9 @@
     <div class="container">
     </div>
     <br><br>
+    <br><br>
 
-    <div class="container">
+    <div class="container mt-5 " >
         <div class="card ">
             <div class="card-header text-dark text-center">
                 History Pengaduan
@@ -64,6 +65,10 @@
                 </div>
                 <hr style="border-color: rgb(0, 0, 0);">
                 @empty
+
+                <div class="text-center mt-4 mb-4">
+                    <h4 class="text-dark">Belum ada History Tanggapan</h4>
+                </div>
                     
                 @endforelse
 

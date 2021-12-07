@@ -7,6 +7,7 @@ use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\TanggapanController;
 use App\Http\Controllers\ReportController;
+// use App\Http\Controllers\API\AuthController;
 ;
 
 /*
@@ -29,17 +30,17 @@ Route::get('/www.ngadu!.com', function() {
 
 Route::get('/login', function() {
 	return view('login');
-})->middleware('guest')->name('login');
+})->name('login');
 
-Route::get('/register',[MasyarakatController::class,'registerForm'])->name('form.register');
-Route::post('/registerpost',[MasyarakatController::class,'registerPost'])->name('register');
-Route::post('/kirimlogin', [AuthController::class,'login'])->name('kirimlogin');
-Route::post('/logout',[AuthController::class,'logout'])->name('logout');
+Route::get('/register',[AuthController::class,'registerForm'])->name('form.register');
+Route::post('/registerpost',[AuthController::class,'registerPost'])->name('register');
+// Route::post('/kirimlogin', [AuthController::class,'login'])->name('kirimlogin');
+// Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 
 
 
 // petugas
-Route::group(['prefix'=>'petugas','middleware'=>['auth:petugas']], function() {
+Route::group(['prefix'=>'petugas','middleware'=>['auth:petugas',]], function() {
 	Route::get('/dashboard', [PetugasController::class,'dashboard'])->name('petugas.dashboard');
 
 	// Petugas CRUD

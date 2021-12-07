@@ -92,13 +92,12 @@
                         @else
                                 <div style="padding-top: 39px; margin-right: -80px; margin-left: 120px;">
                                     <a class="text-white">{{ $user->nama }} | &nbsp;</a>
-                                    <a class="text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    {{-- <a class="text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                    </a> --}}
+                                    {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form> --}}
+                                    <a href="javascript:void(0)" class="text-white"  id="frmlogout">Logout</a>
                                 </div>
 
                         @endguest

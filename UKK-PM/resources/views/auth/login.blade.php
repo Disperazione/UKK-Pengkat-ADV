@@ -21,8 +21,7 @@
                         @endif
 
                     </div>
-                    <form  method="POST" action="{{ route('kirimlogin') }}"  class="mt-5">
-                        @csrf
+                    <form  id="frmlogin" class="mt-5">
                         <div class="input-group pb-3 m-auto" style="width: 330px; ">
                             <span class="input-group-text pe-3 ps-3 fs-6"><i class="fas fa-user"></i></span>
                             <input id="username" type="username" class="form-control fs-5 shadow @error('username') is-invalid @enderror" placeholder="Username" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>

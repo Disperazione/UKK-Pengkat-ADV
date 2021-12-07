@@ -62,6 +62,8 @@
     @yield('content')
     @include('layouts.masyarakat_partial.footer')
 
+    {{-- axios --}}
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     {{-- new js --}}
         <!-- jQuery -->
         <script src="{{ asset('/themes/educenter/plugins/jQuery/jquery.min.js')}}"></script>
@@ -91,14 +93,19 @@
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+{{-- swalert --}}
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{asset('assets/js/api.js')}}"></script>
         <script>
-            $(function() {
-                var duration = 3000; // 4 seconds
-                setTimeout(function() {
-                    $('#alertt').hide().fadeout();
-                }, duration);
-            });
+
+
+
+            // $(function() {
+            //     var duration = 3000; // 4 seconds
+            //     setTimeout(function() {
+            //         $('#alertt').hide().fadeout();
+            //     }, duration);
+            // });
 
             function readURL(input) {
                 if (input.files && input.files[0]) {

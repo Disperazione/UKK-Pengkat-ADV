@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <p class="card-text" style=" width: 600px;
+                                <p class="card-text" style=" width: 400px;
                                               height: 110px;
                                               overflow: auto;
                                               color: black;">
@@ -46,7 +46,7 @@
                                 <label for=""><span class="text-dark">Baru di
                                         tanggapi :</span></label>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-5">
                                         <p class="card-text"><small
                                                 class="text-muted">{{ $tanggap->updated_at->diffForHumans() }}</small>
                                         </p>

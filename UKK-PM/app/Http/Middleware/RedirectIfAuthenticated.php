@@ -25,9 +25,12 @@ class RedirectIfAuthenticated
             } else if (Auth::guard('masyarakat')->check()) {
                return redirect()->route('proses.pengaduan');
             }else{
-                return $next($request);
+                return redirect()->route('login');
+
 
             }
+        
+
         return $next($request);
     }
 }

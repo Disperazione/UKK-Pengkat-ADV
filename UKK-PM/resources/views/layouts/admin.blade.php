@@ -85,13 +85,20 @@
 
     </div>
     @include('layouts.admin_partial.footer')
+     {{-- axios --}}
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- /page content -->
     <script src="{{ asset('global_assets/') }}/js/plugins/tables/datatables/datatables.min.js"></script>
     <script src="{{ asset('global_assets/') }}/js/plugins/forms/selects/select2.min.js"></script>
     <script src="{{ asset('global_assets/') }}/js/demo_pages/datatables_basic.js"></script>
+    <script src="{{asset('assets/js/api.js')}}"></script>
 
 
     <script>
+
+
+
+
         $("#textarea").keyup(function() {
             $("#count").text("Characters left: " + (350 - $(this).val().length));
         });

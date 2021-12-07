@@ -1,6 +1,10 @@
 <!-- footer -->
 <footer>
     <!-- newsletter -->
+    @if (Request::is('user/history/*') ||  Request::is('user/tanggapan/detail/*') )
+    
+    @else
+
     <div class="newsletter">
       <div class="container">
         <div class="row">
@@ -23,6 +27,8 @@
         </div>
       </div>
     </div>
+
+    @endif
     <!-- footer content -->
     <div class="footer bg-footer section border-bottom">
       <div class="container">
