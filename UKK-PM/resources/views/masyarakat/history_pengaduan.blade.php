@@ -1,13 +1,8 @@
 @extends('layouts.auth')
 
 @section('content')
-
-    <div class="container">
-    </div>
-    <br><br>
-    <br><br>
-
-    <div class="container mt-5 " >
+<section class="hero-section  bg-cover " data-background="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">
+    <div class="container  " >
         <div class="card ">
             <div class="card-header text-dark text-center">
                 History Pengaduan
@@ -76,18 +71,18 @@
             </div>
 
                 <div class="container">
-    {{ $history->links() }}
+                  {{ $history->links() }}
 
                 </div>
             <div class="card-footer text-muted text-start">
-                <a href="{{ route('proses.pengaduan') }}" class="btn btn-dark ms-5 "> <i class="icon-exit text-white"
+                <a href="{{ route('masyarakat.dashboard') }}" class="btn btn-dark ms-5 "> <i class="icon-exit text-white"
                         style="transform: rotate(180deg);"> </i> &nbsp; Kembali</a>
             </div>
         </div>
 
     </div>
-    <br>
-    <br>
+</section>
+    
 
 
 @endsection

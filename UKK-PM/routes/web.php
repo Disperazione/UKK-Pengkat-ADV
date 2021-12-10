@@ -7,6 +7,7 @@ use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\TanggapanController;
 use App\Http\Controllers\ReportController;
+use Illuminate\Support\Facades\Http;
 // use App\Http\Controllers\API\AuthController;
 ;
 
@@ -22,10 +23,19 @@ use App\Http\Controllers\ReportController;
 */
 
 
+Route::get('/map', function() {
+	return view('map');
+})->name('map');
 
 Route::get('/www.ngadu!.com', function() {
 	$jumlah_pengaduan =	App\Models\Pengaduan::all()->count();
-	return view('index',compact('jumlah_pengaduan'));
+	$response = Http::get('https://newsapi.org/v2/top-headlines?country=id&apiKey=bb9e9d6c6c5f4dc78d0debd0ac41a6ab');
+	$article = $response->json();
+	for ($i=0; $i <= 4; $i++) { 
+		$artikel[] = $article['articles'][$i];
+	}
+	// dd($artikel);
+	return view('index',compact('jumlah_pengaduan','artikel'));
 })->name('index');
 
 Route::get('/login', function() {

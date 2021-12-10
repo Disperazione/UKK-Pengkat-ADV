@@ -7,13 +7,46 @@ use App\Models\Masyarakat;
 use App\Models\Pengaduan;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use Illuminate\Support\Facades\Http;
+
 class MasyarakatController extends Controller
 {
     
 
 public function dashboard()
 {
-    return view('masyarakat.dashboard');
+    $user = Auth::guard('masyarakat')->user();
+        // $tab = 'proses';
+        $pengaduan = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','proses')->orderBy('created_at','DESC')->paginate(5);
+
+        $user = Auth::guard('masyarakat')->user();
+        // $tab = 'tanggapi';
+        $tanggapan = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','selesai')->orderBy('created_at','DESC')->paginate(5);
+
+        $user = Auth::guard('masyarakat')->user();
+        // $tab = 'tolak';
+        $tolak = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','0')->orderBy('created_at','DESC')->paginate(5);
+
+   
+
+        $curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "Cache-Control: no-cache",
+  ),
+));
+$response = curl_exec($curl);
+$provinsi = json_decode($response);
+        
+        return view('masyarakat.dashboard',compact('user','pengaduan','tanggapan','tolak','provinsi'));
 
 }
    

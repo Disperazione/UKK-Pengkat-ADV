@@ -16,8 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fjalla+One&family=Krona+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-
+    <link rel="stylesheet" type="text/css" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+   
+    
 
     <!-- Styles -->
     <link href="{{ asset('global_assets/') }}/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -52,12 +54,26 @@
         <link rel="icon" type="image/png" href="{{ asset('Login_v17/images/icons/favicon.ico') }}">
 
     {{-- new css --}}
-        @yield('style')
+    <style>
+        #toast-container > .toast-success {
+    color: black;
+    margin-top: 10px;
+
+        
+}
+
+/* this will set the toastr style */
+.toast-success {
+    background-color: rgb(125, 255, 44);
+}
+    </style>
+        @yield('css')
+      
 
     <title>Mari Ngadu! | Home</title>
 </head>
 
-<body>
+<body   >
     @include('layouts.masyarakat_partial.navbar')
     @yield('content')
     @include('layouts.masyarakat_partial.footer')
@@ -65,6 +81,10 @@
     {{-- axios --}}
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     {{-- new js --}}
+    
+   
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!-- jQuery -->
         <script src="{{ asset('/themes/educenter/plugins/jQuery/jquery.min.js')}}"></script>
         <!-- Bootstrap JS -->
@@ -77,9 +97,6 @@
         <script src="{{ asset('/themes/educenter/plugins/venobox/venobox.min.js')}}"></script>
         <!-- filter -->
         <script src="{{ asset('/themes/educenter/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
-        <!-- google map -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-        <script src="{{ asset('/themes/educenter/plugins/google-map/gmap.js')}}"></script>
         <!-- Main Script -->
         <script src="{{ asset('/themes/educenter/js/script.js')}}"></script>
     {{-- new js --}}
@@ -88,17 +105,56 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
         <script src="{{ asset('global_assets/') }}/js/demo_pages/form_inputs.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-{{-- swalert --}}
+
+
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{asset('assets/js/api.js')}}"></script>
+<script>
+    //toast
+     @if(Session::has('message'))
+        toastr.options =
+        {
+            "closeButton" : true,
+            "progressBar" : true
+        }
+                toastr.success("{{ Session::get('message') }}",{iconClass:"toast-success"});
+        @endif
+
+        @if(Session::has('error'))
+        toastr.options =
+        {
+            "closeButton" : true,
+            "progressBar" : true
+        }
+                toastr.error("{{ Session::get('error') }}");
+        @endif
+
+        @if(Session::has('info'))
+        toastr.options =
+        {
+            "closeButton" : true,
+            "progressBar" : true
+        }
+                toastr.info("{{ Session::get('info') }}");
+        @endif
+
+        @if(Session::has('warning'))
+        toastr.options =
+        {
+            "closeButton" : true,
+            "progressBar" : true
+        }
+                toastr.warning("{{ Session::get('warning') }}");
+         @endif
+</script>
         <script>
 
-
+        //Toast
+       
 
             // $(function() {
             //     var duration = 3000; // 4 seconds

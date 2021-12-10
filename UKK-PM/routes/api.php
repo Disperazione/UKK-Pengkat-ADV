@@ -30,6 +30,7 @@ Route::group(['prefix' => 'auth', 'middleware' => 'api'], function() {
     // manggil controller sesuai bawaan laravel 8
 
     // Route::get('/', [BookController::class, 'index']);
+    // Route::get('/kabupaten/{id}', [App\Http\Controllers\MasyarakatController::class, 'logout'])->name('logout');
     
     Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
     Route::post('/logoutall', [App\Http\Controllers\AuthController::class, 'logoutall'])->name('logoutall');

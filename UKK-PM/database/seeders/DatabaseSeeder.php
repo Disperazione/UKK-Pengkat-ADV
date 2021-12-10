@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Faker\Factory as Faker;
 use App\Models\Pengaduan;
+use App\Models\Marker;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 class DatabaseSeeder extends Seeder
@@ -71,5 +72,28 @@ class DatabaseSeeder extends Seeder
                 ]
                  );
              }
+             $mapCenterLatitude = config('leaflet.map_center_latitude');
+             $mapCenterLongitude = config('leaflet.map_center_longitude');
+             $minLatitude = $mapCenterLatitude - 0.05;
+             $maxLatitude = $mapCenterLatitude + 0.05;
+             $minLongitude = $mapCenterLongitude - 0.07;
+             $maxLongitude = $mapCenterLongitude + 0.07;
+             for ($i=1; $i<=6; $i++) {
+                Marker::create(
+                [
+                    'provinsi' => ucwords($faker->words(2, true)),
+                    'kabupaten' => ucwords($faker->words(3, true)),
+                    'kecamatan' => ucwords($faker->words(2, true)),
+                    'kelurahan' => ucwords($faker->words(2, true)),
+                    'address'    => $faker->address,
+                    'latitude'   => $faker->latitude($minLatitude, $maxLatitude),
+                    'longitude'  => $faker->longitude($minLongitude, $maxLongitude),
+                    'id_pengaduan' => $i
+                ]
+                 );
+             }
+
+
+             
     }
 }

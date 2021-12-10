@@ -50,7 +50,7 @@
 
 <header class="fixed-top header">
     <!-- navbar -->
-    <div class="navigation w-100">
+    <div class="navigation w-full   ">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a class="navbar-brand" href="{{ route('index') }}">
@@ -67,7 +67,7 @@
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
                         <li class="nav-item @if(Request::is('/')) active @endif">
-                            <a class="nav-link"  href="{{route('proses.pengaduan')}}">Home</a>
+                            <a class="nav-link"  href="{{route('masyarakat.dashboard')}}">Home</a>
                         </li>
                         @guest
                         @else
@@ -91,13 +91,13 @@
                             @endif
                         @else
                                 <div style="padding-top: 39px; margin-right: -80px; margin-left: 120px;">
-                                    <a class="text-white">{{ $user->nama }} | &nbsp;</a>
-                                    {{-- <a class="text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <a class="text-white" style="font-size: 20px; font-weght: 400px;">{{ $user->nama }} | &nbsp;</a>
+                                    {{-- <a class="text-white" style="font-size: 20px; font-weght: 400px;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a> --}}
                                     {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form> --}}
-                                    <a href="javascript:void(0)" class="text-white"  id="frmlogout">Logout</a>
+                                    <a href="javascript:void(0)" class="text-white" style="font-size: 20px; font-weght: 400px;"  id="frmlogout">Logout</a>
                                 </div>
 
                         @endguest

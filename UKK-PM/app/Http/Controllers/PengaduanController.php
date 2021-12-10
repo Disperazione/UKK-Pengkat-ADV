@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
+use App\Models\Marker;
 use Carbon\Carbon;
 use DataTables;
 use Auth;
@@ -27,14 +28,14 @@ class PengaduanController extends Controller
         $user = Auth::guard('masyarakat')->user();
         $tab = 'proses';
         $pengaduan = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','proses')->orderBy('created_at','DESC')->paginate(5);
-        return view('masyarakat.content_laporan.proses_content',compact('tab','user','pengaduan'));
+        return view('masyarakat.dashboard',compact('tab','user','pengaduan'));
     }
     public function ditanggapi()
     {
         $user = Auth::guard('masyarakat')->user();
         $tab = 'tanggapi';
         $tanggapan = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','selesai')->orderBy('created_at','DESC')->paginate(5);
-        return view('masyarakat.content_laporan.tanggapi_content',compact('tab','user','tanggapan'));
+        return view('masyarakat.dashboard',compact('tab','user','tanggapan'));
 
     }
     public function tolak()
@@ -42,7 +43,7 @@ class PengaduanController extends Controller
         $user = Auth::guard('masyarakat')->user();
         $tab = 'tolak';
         $tolak = Pengaduan::where('id_masyarakat','=',$user->id)->where('status','=','0')->orderBy('created_at','DESC')->paginate(5);
-        return view('masyarakat.content_laporan.tolak_content',compact('tab','user','tolak'));
+        return view('masyarakat.dashboard',compact('tab','user','tolak'));
     }
 
 
@@ -130,30 +131,44 @@ public function getEntri($id)
 
     public function postPengaduan(Request $request)
     {
-        // dd($request->all());
+        // dd($request);
         // $mas = Masyarakat::
         
         
         
-        
+        // table->string('provinsi',255)->nullable();
+        //     $table->string('kabupaten',255)->nullable();
+        //     $table->string('kecamatan',255)->nullable();
+        //     $table->string('kelurahan',255)->nullable();
+        //     $table->string('address')->nullable();
+        //     $table->string('latitude', 15)->nullable();
+        //     $table->string('longitude', 15)->nullable();
         
         $request->validate([
+            'provinsi' => 'required',
+            'kabupaten' => 'required',
+            'kecamatan' => 'required',
+            'kelurahan' => 'required',
+            'address' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
             'foto' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'isi_laporan' => 'required|max:300',
-            'judul_laporan' => 'required|min:10',
+            'judul_laporan' => 'required|min:5',
         ],[
             'required' => 'Input Tidak boleh kosong!',
             'mimes' => 'Harus jpg,png,jpeg,giv,svg',
-            'max' => 'Tidak boleh lebih '
+            'max' => 'Tidak boleh lebih ',
+            'min' => 'Minimal 5  '
         ]);
 
             $nm = $request->foto;
             $namafile = $nm->getClientOriginalName();
             $nm->move(public_path().'/img',$namafile);
     
-                 Pengaduan::create([
+               $pengaduan =  Pengaduan::create([
                     'tgl_pengaduan' => Carbon::now(),
-                    'id_masyarakat' => $request->id_masyarakat,
+                    'id_masyarakat' => Auth::guard('masyarakat')->user()->id,
                     'isi_laporan' => $request->isi_laporan,
                     'judul_laporan' => $request->judul_laporan,
                     'foto' => $namafile,
@@ -161,7 +176,20 @@ public function getEntri($id)
                     'created_at' => Carbon::now(),
                     ]);
 
-                    return redirect()->back()->with('pesan','Berhasil Mengirim tanggapan');
+                    Marker::create([
+                        'provinsi' => $request->provinsi,
+                        'kabupaten' => $request->kabupaten,
+                        'kecamatan' => $request->kecamatan,
+                        'kelurahan' => $request->kelurahan,
+                        'address' => $request->address,
+                        'latitude' => $request->latitude,
+                        'longitude' => $request->longitude,
+                        'id_pengaduan' => $pengaduan->id
+                    ]);
+
+
+
+                    return redirect()->back()->with('message','Berhasil Mengirim Pengaduan');
 
                 //     return response()->json(
                 //        [
